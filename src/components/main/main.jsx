@@ -12,7 +12,7 @@ const Main = () => {
         <section className="main__description description">
           <div className="description__wrapper">
             <Slider />
-            {/*<Details />*/}
+            <Details />
           </div>
           {/*<Tabs />*/}
         </section>
