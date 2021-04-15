@@ -1,0 +1,18 @@
+.header {
+  background-color: $menu-background-color;
+}
+
+.header__wrapper {
+  @include base-flex;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 14px;
+}
+
+.header__logo {
+  margin-left: 6px;
+}
+
+.header__nav {
+  margin-right: 2px;
+}

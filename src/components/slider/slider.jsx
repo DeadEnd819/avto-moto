@@ -32,7 +32,7 @@ const Slider = () => {
             <img src={ImagSmall3} alt="Слайд три"/>
           </li>
         </ul>
-        <button className="slider__button  slider__button--next">
+        <button className="slider__button  slider__button--next slider__button--active">
           <ReactSVG
             className="slider__button-icon slider__button-icon--right"
             src={ArrowRight}

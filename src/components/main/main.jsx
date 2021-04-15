@@ -11,7 +11,7 @@ const Main = () => {
         <h1 className="main__title visually-hidden">Описание автомобиля Марпех 11</h1>
         <section className="main__description description">
           <div className="description__wrapper">
-            {/*<Slider />*/}
+            <Slider />
             {/*<Details />*/}
           </div>
           {/*<Tabs />*/}
