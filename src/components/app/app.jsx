@@ -1,8 +1,15 @@
 import React from 'react';
+import Header from '../header/header';
+import Main from '../main/main';
+import Footer from '../footer/footer';
 
-function App() {
+const App = () => {
   return (
-    <h1>Avto-Moto</h1>
+    <>
+      <Header />
+      <Main />
+      <Footer />
+    </>
   );
 }
 
