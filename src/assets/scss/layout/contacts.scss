@@ -1,3 +1,51 @@
 .contacts {
+  @include base-flex;
+  margin-top: 30px;
   margin-bottom: 140px;
+  margin-left: 8px;
+}
+
+.contacts__info {
+  @include base-flex;
+  @include reset-text;
+  flex-direction: column;
+  width: 274px;
+  margin-right: 104px;
+}
+
+.contacts__name,
+.contacts__value,
+.contacts__link {
+  @include reset-text;
+}
+
+.contacts__name {
+  @include base-font($bold);
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 8px;
+  color: $contacts-text-color;
+}
+
+.contacts__value {
+  @include base-font($medium);
+  font-size: 14px;
+  line-height: 19px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.contacts__value,
+.contacts__link {
+  color: $other-text-color;
+}
+
+.contacts__link {
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.8;
+  }
 }
