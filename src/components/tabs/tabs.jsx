@@ -9,8 +9,6 @@ const Tabs = () => {
   const [activeTab, setActiveTab] = useState(TabNames.FEATURE);
 
   const handleTabClick = (evt) => {
-      evt.preventDefault();
-
       if (!evt.target.textContent) {
         return;
       }

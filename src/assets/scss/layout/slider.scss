@@ -50,11 +50,12 @@
     margin-left: 31px;
   }
 
-  &--active {
+  &:not(:disabled) {
     color: $main-text-color;
+    cursor: pointer;
   }
 
-  &--active:hover {
-    cursor: pointer;
+  &:not(:disabled):hover {
+    opacity: 0.5;
   }
 }
