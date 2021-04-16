@@ -1,0 +1,29 @@
+.tabs__list {
+  @include reset-list;
+  @include base-flex;
+  justify-content: flex-start;
+  margin-left: 8px;
+  margin-bottom: 2px;
+}
+
+.tabs__button {
+  font-size: 20px;
+  line-height: 27px;
+  width: 195px;
+  padding-top: 11px;
+  padding-bottom: 14px;
+  background-color: transparent;
+  border: 1px solid $button-slider-color;
+  color: $main-text-color;
+}
+
+.tabs__button:not(.tabs__button--active):hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.tabs__button--active {
+  background-color: $button-color-red;
+  border-color: $button-color-red;
+  color: $button-color-white;
+}

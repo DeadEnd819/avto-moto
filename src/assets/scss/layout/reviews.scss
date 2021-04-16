@@ -1,0 +1,45 @@
+.reviews {
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 140px;
+  padding-left: 3px;
+}
+
+.reviews__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.reviews__list {
+  @include reset-list;
+}
+
+.reviews__time {
+  @include reset-text;
+  font-size: 14px;
+  line-height: 19px;
+  margin-right: 26px;
+  color: $other-text-color;
+  opacity: 0.4;
+}
+
+.reviews__button-reply {
+  font-size: 16px;
+  line-height: 22px;
+  background-color: transparent;
+  color: $button-color-red;
+  border: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.reviews__button,
+.reviews__button-reply {
+  cursor: pointer;
+}

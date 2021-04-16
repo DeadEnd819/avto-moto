@@ -5,22 +5,22 @@ import Star from "../../assets/img/icon-star.svg";
 const Reviews = () => {
   return (
     <div className="tabs__reviews reviews">
-      <button className="reviews__button">ставить отзыв</button>
+      <button className="reviews__button button button--white">оставить отзыв</button>
       <ul className="reviews__list">
         <li className="reviews__item definition">
           <h2 className="definition__title">Борис Иванов</h2>
           <dl className="definition__list">
             <div className="definition__wrapper">
-              <dt className="definition__name">Достоинства</dt>
+              <dt className="definition__name definition__name--dignity">Достоинства</dt>
               <dd className="definition__value">мощность, внешний вид</dd>
             </div>
             <div className="definition__wrapper">
-              <dt className="definition__name">Недостатки</dt>
+              <dt className="definition__name definition__name--limitations">Недостатки</dt>
               <dd className="definition__value">Слабые тормозные колодки (пришлось заменить)</dd>
             </div>
             <div className="definition__wrapper">
-              <dt className="definition__name">Комментарий</dt>
-              <dd className="definition__value">
+              <dt className="definition__name definition__name--comment">Комментарий</dt>
+              <dd className="definition__value definition__value--comment">
                 Взяли по трейд-ин, на выгодных условиях у дилера.
                 Стильная внешка и крут по базовым характеристикам.
                 Не думал, что пересяду на китайский автопром,
@@ -57,15 +57,15 @@ const Reviews = () => {
           <h2 className="definition__title">Марсель Исмагилов</h2>
           <dl className="definition__list">
             <div className="definition__wrapper">
-              <dt className="definition__name">Достоинства</dt>
+              <dt className="definition__name definition__name--dignity">Достоинства</dt>
               <dd className="definition__value">Cтиль, комфорт, управляемость</dd>
             </div>
             <div className="definition__wrapper">
-              <dt className="definition__name">Недостатки</dt>
+              <dt className="definition__name definition__name--limitations">Недостатки</dt>
               <dd className="definition__value">Дорогой ремонт и обслуживание</dd>
             </div>
             <div className="definition__wrapper">
-              <dt className="definition__name">Комментарий</dt>
+              <dt className="definition__name definition__name--comment">Комментарий</dt>
               <dd className="definition__value">
                 Дизайн отличный, управление просто шикарно,
                 ощущения за рулём такой машины особые.

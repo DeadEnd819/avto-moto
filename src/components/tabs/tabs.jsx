@@ -1,7 +1,7 @@
 import React from 'react';
-import Features from "../features/features";
-import Reviews from "../reviews/reviews";
-import Contacts from "../contacts/contacts";
+import Features from '../features/features';
+import Reviews from '../reviews/reviews';
+import Contacts from '../contacts/contacts';
 
 const Tabs = () => {
   return (
@@ -17,8 +17,8 @@ const Tabs = () => {
           <button className="tabs__button">Контакты</button>
         </li>
       </ul>
-      <Features />
-      <Reviews />
+      {/*<Features />*/}
+      {/*<Reviews />*/}
       <Contacts />
     </div>
   );

@@ -14,7 +14,7 @@ const Main = () => {
             <Slider />
             <Details />
           </div>
-          {/*<Tabs />*/}
+          <Tabs />
         </section>
         {/*<Popup />*/}
       </div>

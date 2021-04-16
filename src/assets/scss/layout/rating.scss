@@ -1,0 +1,21 @@
+.rating {
+  @include base-flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.rating__stars {
+  @include reset-list;
+  @include base-flex;
+  margin-right: 20px;
+}
+
+.rating__star:not(:last-child) {
+  margin-right: 5px;
+}
+
+.rating__text {
+  @include reset-text;
+  padding-bottom: 2px;
+  color: $button-color-red;
+}

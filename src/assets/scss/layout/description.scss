@@ -1,8 +1,8 @@
 .description {
   margin-top: 90px;
-  margin-bottom: 90px;
 }
 
 .description__wrapper {
   @include base-flex;
+  margin-bottom: 90px;
 }
