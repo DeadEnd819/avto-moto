@@ -49,3 +49,14 @@
     opacity: 0.8;
   }
 }
+
+.contacts__map-wrapper {
+  position: relative;
+}
+
+.contacts__map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+}
