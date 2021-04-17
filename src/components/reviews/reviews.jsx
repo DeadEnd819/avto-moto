@@ -2,10 +2,10 @@ import React from 'react';
 import {ReactSVG} from "react-svg";
 import Star from "../../assets/img/icon-star.svg";
 
-const Reviews = () => {
+const Reviews = ({onPopupButtonClick}) => {
   return (
     <div className="tabs__reviews reviews">
-      <button className="reviews__button button button--white">оставить отзыв</button>
+      <button className="reviews__button button button--white" onClick={onPopupButtonClick}>оставить отзыв</button>
       <ul className="reviews__list">
         <li className="reviews__item definition">
           <h2 className="definition__title">Борис Иванов</h2>

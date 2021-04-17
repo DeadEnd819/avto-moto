@@ -1,10 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Slider from '../slider/slider';
 import Details from '../details/details';
 import Tabs from '../tabs/tabs';
-import Popup from '../popup/poup';
+import Popup from '../popup/popup';
 
 const Main = () => {
+  const [activePopup, setActivePopup] = useState(false);
+
+  const handlePopupOpenClick = () => {
+    setActivePopup(true);
+  }
+
+  const handlePopupCloseClick = () => {
+    setActivePopup(false);
+  }
+
   return (
     <main className="main">
       <div className="main_wrapper container">
@@ -14,9 +24,9 @@ const Main = () => {
             <Slider />
             <Details />
           </div>
-          <Tabs />
+          <Tabs onPopupButtonClick={handlePopupOpenClick} />
         </section>
-        {/*<Popup />*/}
+        {activePopup && <Popup onPopupButtonClick={handlePopupCloseClick}/>}
       </div>
     </main>
   );
