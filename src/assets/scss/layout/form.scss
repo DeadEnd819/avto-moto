@@ -83,18 +83,12 @@
   &--star:not(:last-child) {
     margin-left: 8px;
   }
-
-  &--star:hover {
-    color: #D12136;
-  }
 }
 
-.form__input[type="radio"]:checked + .form__label--star {
-  color: #D12136;
-}
-
+.form__label--star:hover,
+.form__input[type="radio"]:checked + .form__label--star,
 .form__input[type="radio"]:checked ~ .form__label--star {
-  color: #D12136;
+  color: $button-color-red;
 }
 
 .form__rating-icon svg {

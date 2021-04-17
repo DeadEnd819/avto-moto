@@ -2,13 +2,23 @@
   max-width: 516px;
 }
 
-.details__wrapper {
+.details__wrapper,
+.details__list,
+.details__price,
+.details__button-wrapper {
   @include base-flex;
+}
+
+.details__wrapper {
   flex-direction: column;
 }
 
-.details__title {
+.details__title,
+.details__price {
   @include reset-text;
+}
+
+.details__title {
   @include base-font($bold);
   font-size: 30px;
   line-height: 41px;
@@ -18,7 +28,6 @@
 
 .details__list {
   @include reset-list;
-  @include base-flex;
   margin-bottom: 37px;
 }
 
@@ -52,8 +61,6 @@
 }
 
 .details__price {
-  @include reset-text;
-  @include base-flex;
   @include base-font($bold);
   font-size: 35px;
   line-height: 48px;
@@ -77,13 +84,12 @@
     height: 1px;
     top: 12px;
     left: -6px;
-    background-color: #A3A4A6;
+    background-color: $line-price-color;
     transform: rotate(-6deg);
   }
 }
 
 .details__button-wrapper {
-  @include base-flex;
   flex-direction: column;
   align-items: flex-start;
 }

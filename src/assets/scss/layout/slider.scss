@@ -17,19 +17,25 @@
   color: $button-color-white;
 }
 
-.slider__control {
+.slider__control,
+.slider__preview-list {
   @include base-flex;
+}
+
+.slider__control {
   justify-content: center;
   margin-top: 39px;
 }
 
 .slider__preview-list {
   @include reset-list;
-  @include base-flex
+  width: 434px;
 }
 
-.slider__preview-item:not(:last-child) {
-  margin-right: 25px;
+.slider__preview-item {
+  &:not(:nth-child(3n+3)) {
+    margin-right: 25px;
+  }
 }
 
 .slider__button {

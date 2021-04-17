@@ -1,12 +1,15 @@
-.rating {
+.rating,
+.rating__stars {
   @include base-flex;
+}
+
+.rating {
   align-items: center;
   margin-bottom: 25px;
 }
 
 .rating__stars {
   @include reset-list;
-  @include base-flex;
   margin-right: 20px;
 }
 

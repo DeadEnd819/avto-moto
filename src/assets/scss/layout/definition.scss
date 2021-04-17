@@ -18,19 +18,19 @@
   }
 }
 
-.definition__title {
+.definition__title,
+.definition__list,
+.definition__name,
+.definition__value {
   @include reset-text;
+}
+
+.definition__title {
   @include base-font($medium);
   font-size: 20px;
   line-height: 27px;
   margin-bottom: 12px;
   color: $main-text-color;
-}
-
-.definition__list,
-.definition__name,
-.definition__value {
-  @include reset-text;
 }
 
 .definition__wrapper {

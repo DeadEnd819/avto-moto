@@ -1,56 +1,37 @@
 import React, {useState} from 'react';
-import {ReactSVG} from 'react-svg';
-import ArrowRight from '../../assets/img/icon-arrow-right.svg';
-import ArrowLeft from '../../assets/img/icon-arrow-left.svg';
+import Slide from '../slide/slide';
+import SliderButton from '../slider-button/slider-button';
 import {IMAGES} from '../../const';
 
 const Slider = () => {
   const [activeSlide, setActiveSlide] = useState(0);
 
-  const handlePrevButtonClick = () => {
-    setActiveSlide((prevState) => prevState - 1);
-  };
-
-  const handleNextButtonClick = () => {
-    setActiveSlide((prevState) => prevState + 1)
-  };
-
   return (
     <div className="description__slider slider">
-      <div className="slider__slide slide">
-        <img className="slide__image" src={IMAGES[activeSlide].big} alt="Avto preview"/>
-        <p className="slide__text">NEW MODEL</p>
-      </div>
+      <Slide img={IMAGES[activeSlide]} />
       <div className="slider__control">
-        <button
-          className="slider__button slider__button--prev"
-          onClick={handlePrevButtonClick}
+        <SliderButton
+          onButtonClick={() => setActiveSlide((prevState) => prevState - 1)}
           disabled={activeSlide === 0}
-        >
-          <ReactSVG
-            className="slider__button-icon slider__button-icon--left"
-            src={ArrowLeft}
-          />
-        </button>
+          type={`prev`}
+        />
         <ul className="slider__preview-list">
           {IMAGES.map((item, i) => {
             return (
               <li key={`${i}-${item}`} className="slider__preview-item">
-                <img src={item.small} alt="Слайд один"/>
+                <picture>
+                  <source type="image/webp" srcSet={item.smallWebp} />
+                  <img src={item.small} alt={`Миниатюра слайда ${i + 1}`} />
+                </picture>
               </li>
             );
           })}
         </ul>
-        <button
-          className="slider__button  slider__button--next"
-          onClick={handleNextButtonClick}
+        <SliderButton
+          onButtonClick={() => setActiveSlide((prevState) => prevState + 1)}
           disabled={activeSlide === IMAGES.length - 1}
-        >
-          <ReactSVG
-            className="slider__button-icon slider__button-icon--right"
-            src={ArrowRight}
-          />
-        </button>
+          type={`next`}
+        />
       </div>
     </div>
   );

@@ -1,22 +1,25 @@
-.contacts {
+.contacts,
+.contacts__info {
   @include base-flex;
+}
+
+.contacts {
   margin-top: 30px;
   margin-bottom: 140px;
   margin-left: 8px;
 }
 
-.contacts__info {
-  @include base-flex;
-  @include reset-text;
-  flex-direction: column;
-  width: 274px;
-  margin-right: 104px;
-}
-
+.contacts__info,
 .contacts__name,
 .contacts__value,
 .contacts__link {
   @include reset-text;
+}
+
+.contacts__info {
+  flex-direction: column;
+  width: 274px;
+  margin-right: 104px;
 }
 
 .contacts__name {
