@@ -10,11 +10,11 @@
 
 .rating__stars {
   @include reset-list;
-  margin-right: 20px;
+  margin-right: 22px;
 }
 
 .rating__star:not(:last-child) {
-  margin-right: 5px;
+  margin-right: 4px;
 }
 
 .rating__text {

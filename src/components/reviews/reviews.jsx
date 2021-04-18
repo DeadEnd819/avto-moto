@@ -46,10 +46,10 @@ const Reviews = ({onPopupButtonClick}) => {
                 <ReactSVG className="rating__icon" src={Star}/>
               </li>
             </ul>
-            <p className="rating__text">Советую</p>
+            <p className="rating__text">Советует</p>
           </div>
           <div>
-            <time className="reviews__time" dateTime="2021-03-14 23:00">месяц назад</time>
+            <time className="reviews__time" dateTime="2021-03-14 23:00">1 минуту назад</time>
             <button className="reviews__button-reply">Ответить</button>
           </div>
         </li>
@@ -94,10 +94,10 @@ const Reviews = ({onPopupButtonClick}) => {
                 <ReactSVG className="rating__icon" src={Star}/>
               </li>
             </ul>
-            <p className="rating__text">Советую</p>
+            <p className="rating__text">Советует</p>
           </div>
           <div>
-            <time className="reviews__time" dateTime="2021-03-14 23:00">месяц назад</time>
+            <time className="reviews__time" dateTime="2021-03-14 23:00">1 минуту назад</time>
             <button className="reviews__button-reply">Ответить</button>
           </div>
         </li>

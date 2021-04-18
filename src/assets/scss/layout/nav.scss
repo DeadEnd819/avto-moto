@@ -5,20 +5,29 @@
   align-content: center;
 
   &--header {
+    justify-content: flex-start;
+    max-width: 965px;
     margin-top: 16px;
+    margin-right: -68px;
   }
 
   &--footer {
     margin-top: 30px;
     margin-bottom: 30px;
+    margin-right: -58px;
   }
 }
 
-.nav__list--header .nav__item:not(:last-child) {
+.nav__list--header .nav__item {
   margin-right: 68px;
 }
 
 .nav__item {
+  max-width: 218px;
+  margin-bottom: 22px;
+  margin-right: 58px;
+  text-align: center;
+
   &:hover,
   &:focus {
     opacity: 0.8;
@@ -32,5 +41,6 @@
 .nav__link {
   @include base-font($medium);
   font-size: 16px;
+  overflow-wrap: anywhere;
   color: $main-text-color;
 }

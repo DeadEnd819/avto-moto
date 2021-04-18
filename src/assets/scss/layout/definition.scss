@@ -3,7 +3,7 @@
   font-size: 15px;
   line-height: 20px;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 18px;
   color: $other-text-color;
 
   &:after {
@@ -39,8 +39,8 @@
 
 
   &:not(:last-child) {
-    margin-bottom: 13px;
-    padding-left: 21px;
+    margin-bottom: 16px;
+    padding-left: 20px;
   }
 
   &:last-child {

@@ -1,14 +1,13 @@
 .reviews {
   position: relative;
-  margin-top: 15px;
+  margin-top: 10px;
   margin-bottom: 140px;
-  padding-left: 3px;
 }
 
 .reviews__button {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 20px;
+  right: 1px;
   z-index: 2;
 }
 
@@ -20,7 +19,7 @@
   @include reset-text;
   font-size: 14px;
   line-height: 19px;
-  margin-right: 26px;
+  margin-right: 21px;
   color: $other-text-color;
   opacity: 0.4;
 }

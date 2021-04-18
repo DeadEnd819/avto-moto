@@ -1,7 +1,7 @@
 .features {
   max-width: 565px;
+  margin-top: 11px;
   margin-bottom: 140px;
-  margin-left: 8px;
 }
 
 .features__item-wrapper {
@@ -9,6 +9,8 @@
   @include base-flex;
   position: relative;
   justify-content: space-between;
+  flex-wrap: inherit;
+  align-items: center;
   padding-top: 20px;
   padding-bottom: 8px;
 
@@ -26,8 +28,11 @@
 .features__name,
 .features__value {
   font-size: 16px;
+  max-width: 280px;
+  overflow-wrap: anywhere;
 }
 
 .features__value {
+  text-align: end;
   color: $other-text-color;
 }

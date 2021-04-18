@@ -4,9 +4,8 @@
 }
 
 .contacts {
-  margin-top: 30px;
+  margin-top: 26px;
   margin-bottom: 140px;
-  margin-left: 8px;
 }
 
 .contacts__info,
@@ -19,14 +18,14 @@
 .contacts__info {
   flex-direction: column;
   width: 274px;
-  margin-right: 104px;
+  margin-right: 74px;
 }
 
 .contacts__name {
   @include base-font($bold);
   font-size: 16px;
   line-height: 22px;
-  margin-bottom: 8px;
+  margin-bottom: 9px;
   color: $contacts-text-color;
 }
 
@@ -36,7 +35,7 @@
   line-height: 19px;
 
   &:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 }
 
@@ -55,6 +54,7 @@
 
 .contacts__map-wrapper {
   position: relative;
+  margin-top: 4px;
 }
 
 .contacts__map {
