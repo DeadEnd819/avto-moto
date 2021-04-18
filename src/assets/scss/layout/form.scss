@@ -57,6 +57,10 @@
   &:required {
     background: no-repeat 12px 12px url("../../img/icon-required.svg") $global-background-color;
   }
+
+  &:required:invalid {
+    border-color: $error-color;
+  }
 }
 
 .form__fieldset {

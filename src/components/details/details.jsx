@@ -1,4 +1,5 @@
 import React from 'react';
+import {DETAILS} from '../../const';
 
 const Details = () => {
   return (
@@ -6,18 +7,11 @@ const Details = () => {
       <div className="details__wrapper">
         <h2 className="details__title">Марпех 11</h2>
         <ul className="details__list">
-          <li className="details__item details__item--fuel">
-            бензин
-          </li>
-          <li className="details__item details__item--transmission">
-            механика
-          </li>
-          <li className="details__item details__item--horsepower">
-            100 л.с.
-          </li>
-          <li className="details__item details__item--volume">
-            1.4 л
-          </li>
+          {DETAILS.map((item, i) =>
+            <li className={`details__item details__item--${item.name}`} key={i + item}>
+              {item.value}
+            </li>
+          )}
         </ul>
         <p className="details__price">
           2 300 000 ₽
