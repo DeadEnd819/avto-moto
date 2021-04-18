@@ -34,7 +34,7 @@ const Popup = ({onPopupButtonClick}) => {
         <button className="review-popup__button-close" onClick={onPopupButtonClick}>
           <ReactSVG className="review-popup__button-icon" src={CloseIcon}/>
         </button>
-        <form className="review-popup__form form">
+        <form className="review-popup__form form" action="#">
           <div className="form__wrapper">
             <div className="form__input-wrapper">
               {POPUP_INPUTS.map((item, i) =>

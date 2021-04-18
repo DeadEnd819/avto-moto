@@ -22,3 +22,11 @@
   padding-bottom: 2px;
   color: $button-color-red;
 }
+
+.rating__icon {
+  color: $default-color-star;
+
+  &--red {
+    color: $button-color-red;
+  }
+}
