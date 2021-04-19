@@ -1,6 +1,7 @@
 .form,
 .form__wrapper,
-.form__input-wrapper,
+.form__inputs-wrapper,
+.form__list,
 .form__rating-wrapper,
 .form__stars-wrapper {
   @include base-flex;
@@ -11,7 +12,12 @@
   justify-content: center;
 }
 
-.form__input-wrapper {
+.form__list {
+  @include reset-list;
+}
+
+.form__list,
+.form__inputs-wrapper {
   flex-direction: column;
 
   &:not(:last-child) {
@@ -20,6 +26,14 @@
 
   &:last-child {
     justify-content: flex-end;
+  }
+}
+
+.form__item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
   }
 }
 
@@ -33,15 +47,11 @@
 
 .form__input[type="text"] {
   height: 50px;
-
-  &:not(:last-child) {
-    margin-bottom: 16px;
-  }
 }
 
 .form__textarea {
-
   min-height: 118px;
+  margin-bottom: -5px;
   padding-top: 15px;
   resize: none;
 }
@@ -54,18 +64,30 @@
   outline: none;
   border: 1px solid $input-border-color;
 
-  &:required {
+  &--required {
     background: no-repeat 12px 12px url("../../img/icon-required.svg") $global-background-color;
   }
+}
 
-  &:required:invalid {
+.form--error .form__input,
+.form--error .form__textarea {
+  &--required {
     border-color: $error-color;
+  }
+}
+
+.form--error .form__item {
+  &--required:before {
+    content: "Пожалуйста, заполните поле";
+    position: absolute;
+    top: -25px;
+    color: $error-color;
   }
 }
 
 .form__fieldset {
   @include reset-text;
-  margin-bottom: 25px;
+  margin-bottom: 9px;
   border: none;
 }
 

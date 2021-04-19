@@ -11,6 +11,10 @@ import ImagSmallWebp1 from './assets/img/avto-1-small.webp';
 import ImagSmallWebp2 from './assets/img/avto-2-small.webp';
 import ImagSmallWebp3 from './assets/img/avto-3-small.webp';
 
+export const STORE_REVIEWS_PREFIX = `avto-moto-localstorage-reviews`;
+export const STORE_VERSION = `v1`;
+export const STORE_NAME = `${STORE_REVIEWS_PREFIX}-${STORE_VERSION}`;
+
 export const HEADER_NAV_LINKS = [
   `Автомобили`,
   `Контакты`,
@@ -28,23 +32,20 @@ export const FOOTER_NAV_LINKS = [
   `Test draiv`,
 ];
 
-export const RATING_STARS = [`1`, `2`, `3`, `4`, `5`];
+export const RATING_STARS = [`5`, `4`, `3`, `2`, `1`];
 
 export const POPUP_INPUTS = [
   {
-    id: `name`,
+    id: `user`,
     title: `Имя`,
-    required: true
   },
   {
     id: `dignity`,
     title:`Достоинства`,
-    required: false
   },
   {
     id: `limitations`,
     title:`Недостатки`,
-    required: false
   }
   ];
 
@@ -75,53 +76,34 @@ export const IMAGES = [
   },
 ];
 
-export const DETAILS = [
-  {
-    name: `fuel`,
-    value: `бензин`
-  },
-  {
-    name: `transmission`,
-    value: `механика`
-  },
-  {
-    name: `horsepower`,
-    value: `100 л.с.`
-  },
-  {
-    name: `volume`,
-    value: `1.4 л`
-  },
-];
-
-export const FEATURES = [
+export const FEATURES_LIST = [
   {
     name: `Трансмиссия`,
-    value: `Роботизированная`
+    key: `transmission`
   },
   {
     name: `Мощность двигателя, л.с.`,
-    value: `249`
+    key: `horsepower`
   },
   {
     name: `Тип двигателя`,
-    value: `Бензиновый`
+    key: `fuel`
   },
   {
     name: `Привод`,
-    value: `Полный`
+    key: `drive`
   },
   {
     name: `Объем двигателя, л`,
-    value: `2.4`
+    key: `volume`
   },
   {
     name: `Макс. крутящий момент`,
-    value: `370/4500`
+    key: `torque`
   },
   {
     name: `Количество цилиндров`,
-    value: `4`
+    key: `cylinders`
   },
 ];
 
@@ -146,33 +128,8 @@ export const CONTACTS = [
 
 export const DEFINITION_TITLES = [`Достоинства`, `Недостатки`, `Комментарий`];
 
-export const REVIEWS_MOCKS = [
-  {
-    user: `Борис Иванов`,
-    definition: {
-      dignity: `мощность, внешний вид`,
-      limitations: `Слабые тормозные колодки (пришлось заменить)`,
-      comment: `Взяли по трейд-ин, на выгодных условиях у дилера.
-            Стильная внешка и крут по базовым характеристикам.
-            Не думал, что пересяду на китайский автопром,
-            но сейчас гоняю и понимаю, что полностью доволен.`,
-    },
-    rating: 3,
-    time: `1 минуту назад`,
-  },
-  {
-    user: `Марсель Исмагилов`,
-    definition: {
-      dignity: `Cтиль, комфорт, управляемость`,
-      limitations: `Дорогой ремонт и обслуживание`,
-      comment: `Дизайн отличный, управление просто шикарно,
-                ощущения за рулём такой машины особые.
-                Но ремонт очень дорогой. Пару месяцев назад
-                пришлось менять двигатель. По стоимости вышло
-                как новый автомобиль. Так что, если покупать
-                эту машину, надо быть готовым к большим расходам на обслуживание.`,
-    },
-    rating: 2,
-    time: `1 минуту назад`,
-  },
-];
+export const ActionType = {
+  ADD_REVIEW: `ADD_REVIEW`,
+  POPUP_OPEN: `POPUP_OPEN`,
+  POPUP_CLOSE: `POPUP_CLOSE`,
+};

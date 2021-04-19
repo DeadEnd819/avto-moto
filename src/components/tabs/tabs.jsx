@@ -5,7 +5,7 @@ import Contacts from '../contacts/contacts';
 import TabsItem from '../tabs-item/tabs-item';
 import {TabNames} from '../../const';
 
-const Tabs = ({onPopupButtonClick}) => {
+const Tabs = () => {
   const [activeTab, setActiveTab] = useState(TabNames.FEATURE);
 
   const handleTabClick = (evt) => {
@@ -21,7 +21,7 @@ const Tabs = ({onPopupButtonClick}) => {
       case TabNames.FEATURE:
         return <Features />;
       case TabNames.REVIEWS:
-        return <Reviews onPopupButtonClick={onPopupButtonClick} />;
+        return <Reviews />;
       case TabNames.CONTACTS:
         return <Contacts />;
       default:

@@ -1,20 +1,12 @@
-import React, {useState} from 'react';
+import React from 'react';
+import {connect} from 'react-redux';
 import Slider from '../slider/slider';
 import Details from '../details/details';
 import Tabs from '../tabs/tabs';
 import Popup from '../popup/popup';
+import {getPopupFlag} from "../../store/selectors";
 
-const Main = () => {
-  const [activePopup, setActivePopup] = useState(false);
-
-  const handlePopupOpenClick = () => {
-    setActivePopup(true);
-  }
-
-  const handlePopupCloseClick = () => {
-    setActivePopup(false);
-  }
-
+const Main = ({getPopupFlag}) => {
   return (
     <main className="main">
       <div className="main_wrapper container">
@@ -24,12 +16,16 @@ const Main = () => {
             <Slider />
             <Details />
           </div>
-          <Tabs onPopupButtonClick={handlePopupOpenClick} />
+          <Tabs />
         </section>
-        {activePopup && <Popup onPopupButtonClick={handlePopupCloseClick}/>}
+        {getPopupFlag && <Popup />}
       </div>
     </main>
   );
 }
 
-export default Main;
+const mapStateToProps = (store) => ({
+  getPopupFlag: getPopupFlag(store),
+});
+
+export default connect(mapStateToProps)(Main);

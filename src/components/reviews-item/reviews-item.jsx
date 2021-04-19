@@ -2,6 +2,7 @@ import React from 'react';
 import {ReactSVG} from 'react-svg';
 import Star from '../../assets/img/icon-star.svg';
 import {DEFINITION_TITLES, RATING_STARS} from '../../const';
+import {getReviewDate} from '../../utils';
 
 const ReviewsItem = ({review}) => {
   const {user, definition, rating, time} = review;
@@ -31,7 +32,7 @@ const ReviewsItem = ({review}) => {
         <p className="rating__text">{rating < 3 ? `Не советую` : `Советую`}</p>
       </div>
       <div>
-        <time className="reviews__time" dateTime={`${time}`}>{time}</time>
+        <time className="reviews__time" dateTime={time}>{getReviewDate(time)}</time>
         <button className="reviews__button-reply">Ответить</button>
       </div>
     </li>
