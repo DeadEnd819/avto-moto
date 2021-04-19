@@ -28,4 +28,6 @@ const Contacts = () => {
   );
 }
 
+Contacts.propTypes = {};
+
 export default Contacts;

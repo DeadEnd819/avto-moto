@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 const TabsItem = ({tab, activeTab, onTabClick}) => {
   return (
@@ -11,6 +12,12 @@ const TabsItem = ({tab, activeTab, onTabClick}) => {
       </button>
     </li>
   );
+};
+
+TabsItem.propTypes = {
+  tab: PropTypes.string.isRequired,
+  activeTab: PropTypes.string.isRequired,
+  onTabClick: PropTypes.func.isRequired,
 };
 
 export default TabsItem;

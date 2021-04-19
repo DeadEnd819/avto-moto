@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import Slider from '../slider/slider';
 import Details from '../details/details';
@@ -23,6 +24,10 @@ const Main = ({getPopupFlag}) => {
     </main>
   );
 }
+
+Main.propTypes = {
+  getPopupFlag: PropTypes.bool.isRequired,
+};
 
 const mapStateToProps = (store) => ({
   getPopupFlag: getPopupFlag(store),

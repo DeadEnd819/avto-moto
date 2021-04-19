@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Slide = ({img}) => {
   return (
@@ -11,5 +12,14 @@ const Slide = ({img}) => {
     </div>
   );
 }
+
+Slide.propTypes = {
+  img: PropTypes.shape({
+    big: PropTypes.string.isRequired,
+    bigWebp: PropTypes.string.isRequired,
+    small: PropTypes.string.isRequired,
+    smallWebp: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 export default Slide;

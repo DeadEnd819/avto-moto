@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {ReactSVG} from 'react-svg';
 import Star from '../../assets/img/icon-star.svg';
 import {DEFINITION_TITLES, RATING_STARS} from '../../const';
@@ -38,5 +39,18 @@ const ReviewsItem = ({review}) => {
     </li>
   );
 }
+
+ReviewsItem.propTypes = {
+  review: PropTypes.shape({
+    user: PropTypes.string.isRequired,
+    definition: PropTypes.shape({
+      dignity: PropTypes.string.isRequired,
+      limitations: PropTypes.string.isRequired,
+      comment: PropTypes.string.isRequired,
+    }).isRequired,
+    rating: PropTypes.string.isRequired,
+    time: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 export default ReviewsItem;

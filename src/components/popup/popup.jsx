@@ -1,4 +1,5 @@
 import React, {Fragment, useCallback, useState} from 'react';
+import PropTypes from 'prop-types';
 import {ReactSVG} from 'react-svg';
 import {connect} from 'react-redux';
 import CloseIcon from '../../assets/img/icon-close.svg';
@@ -45,7 +46,7 @@ const Popup = ({closePopup, setReview}) => {
           comment,
         },
         rating,
-        time: new Date(),
+        time: String(new Date()),
       };
 
       if (!requiredInput.user || !requiredInput.comment) {
@@ -148,6 +149,11 @@ const Popup = ({closePopup, setReview}) => {
     </div>
   );
 }
+
+Popup.propTypes = {
+  closePopup: PropTypes.func.isRequired,
+  setReview: PropTypes.func.isRequired,
+};
 
 const mapDispatchToProps = (dispatch) => ({
   setReview(date) {

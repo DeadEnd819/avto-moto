@@ -1,6 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Nav = ({block, list}) => {
+
   return (
     <nav className={`${block}__nav nav`}>
       <ul className={`nav__list nav__list--${block}`}>
@@ -15,5 +17,10 @@ const Nav = ({block, list}) => {
     </nav>
   );
 }
+
+Nav.propTypes = {
+  block: PropTypes.string.isRequired,
+  list: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+};
 
 export default Nav;

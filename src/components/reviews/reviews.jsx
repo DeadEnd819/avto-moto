@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import ReviewsItem from '../reviews-item/reviews-item';
 import {getReviews} from '../../store/selectors';
-import {setPopupOpen} from "../../store/action";
+import {setPopupOpen} from '../../store/action';
 
 const Reviews = ({openPopup, reviews}) => {
   return (
@@ -21,6 +22,21 @@ const Reviews = ({openPopup, reviews}) => {
     </div>
   );
 }
+
+Reviews.propTypes = {
+  openPopup: PropTypes.func.isRequired,
+  reviews: PropTypes.arrayOf(
+    PropTypes.shape({
+      user: PropTypes.string.isRequired,
+      definition: PropTypes.shape({
+        dignity: PropTypes.string.isRequired,
+        limitations: PropTypes.string.isRequired,
+        comment: PropTypes.string.isRequired,
+      }).isRequired,
+      rating: PropTypes.string.isRequired,
+      time: PropTypes.string.isRequired,
+  })),
+};
 
 const mapStateToProps = (store) => ({
   reviews: getReviews(store),

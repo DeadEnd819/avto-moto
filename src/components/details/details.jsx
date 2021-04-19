@@ -1,5 +1,4 @@
 import React from 'react';
-import {DETAILS} from '../../const';
 import {splittingDigits} from '../../utils';
 import {AVTO_INFO_MOCKS} from '../../mocks';
 
@@ -35,5 +34,7 @@ const Details = () => {
     </div>
   );
 }
+
+Details.propTypes = {};
 
 export default Details;

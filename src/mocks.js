@@ -10,8 +10,8 @@ export const REVIEWS_MOCKS = {
             Не думал, что пересяду на китайский автопром,
             но сейчас гоняю и понимаю, что полностью доволен.`,
       },
-      rating: 3,
-      time: new Date(),
+      rating: `3`,
+      time: String(new Date()),
     },
     {
       user: `Марсель Исмагилов`,
@@ -25,8 +25,8 @@ export const REVIEWS_MOCKS = {
                 как новый автомобиль. Так что, если покупать
                 эту машину, надо быть готовым к большим расходам на обслуживание.`,
       },
-      rating: 2,
-      time:  new Date(),
+      rating: `2`,
+      time:  String(new Date()),
     },
   ]
 };
