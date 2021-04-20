@@ -4,7 +4,11 @@ import {REVIEWS_MOCKS} from '../../../mocks';
 
 const {ADD_REVIEW} = ActionType;
 
-const initialState = (localStorage[STORE_NAME]) ? JSON.parse(localStorage[STORE_NAME]) : REVIEWS_MOCKS;
+const initialState = (localStorage[STORE_NAME]) ?
+  JSON.parse(localStorage[STORE_NAME]) :
+  {
+    reviews: REVIEWS_MOCKS
+  };
 
 const reviews = (state = initialState, action) => {
   switch (action.type) {
