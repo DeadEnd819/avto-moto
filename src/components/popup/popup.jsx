@@ -1,50 +1,52 @@
-import React, {Fragment, useCallback, useState} from 'react';
+import React, {Fragment, useRef, useEffect, useCallback, useState} from 'react';
 import PropTypes from 'prop-types';
 import {ReactSVG} from 'react-svg';
 import {connect} from 'react-redux';
 import CloseIcon from '../../assets/img/icon-close.svg';
 import StarIcon from '../../assets/img/icon-star.svg';
-import {setPopupClose, setReview} from '../../store/action';
+import {getPopupData, getRequiredInput} from '../../store/selectors';
+import {setPopupClose, setReview, setPopupData, setRequiredInput, clearPopupData} from '../../store/action';
 import {useEscapeButton} from '../../hooks/use-escape-button';
 import {RATING_STARS, POPUP_INPUTS} from '../../const';
 import {extend} from '../../utils';
 
-const Popup = ({closePopup, setReview}) => {
+const Popup = ({
+                 popupData,
+                 requiredInput,
+                 closePopup,
+                 setReview,
+                 setPopupData,
+                 clearPopupData,
+                 setRequiredInput
+}) => {
   const [errorForm, setErrorForm] = useState(false);
-  const [requiredInput, setRequiredInput] = useState({
-    user: false,
-    comment: false
-  });
+  const inputUser = useRef(null);
 
-  const [reviewState, setReviewState] = useState({
-    user: ``,
-    dignity: ``,
-    limitations: ``,
-    comment: ``,
-    rating: `0`,
-  });
+  useEffect(() => {
+    document.body.style.overflow = `hidden`;
+    inputUser.current.focus();
 
-  const {user, dignity, limitations, comment, rating} = reviewState;
+    return () => {
+      document.body.style.overflow = `auto`;
+    }
+  },[]);
 
   const handleFieldChange = useCallback(({name, value}) => {
-    setReviewState(extend(reviewState, {[name]: value}));
+    setPopupData(extend(popupData, {[name]: value}));
 
     if (name in requiredInput) {
       setRequiredInput(extend(requiredInput, {[name]: Boolean(value)}))
     }
-  }, [reviewState, requiredInput, setReviewState, setRequiredInput]);
+  }, [popupData, requiredInput, setRequiredInput, setPopupData]);
 
   const handleFormSubmit = useCallback(
     (evt) => {
       evt.preventDefault();
+      const {user, rating, ...definition} = popupData;
 
       const review = {
         user,
-        definition: {
-          dignity,
-          limitations,
-          comment,
-        },
+        definition,
         rating,
         time: String(new Date()),
       };
@@ -56,8 +58,9 @@ const Popup = ({closePopup, setReview}) => {
 
       setErrorForm(false);
       setReview(review);
+      clearPopupData();
       closePopup();
-    }, [user, dignity, limitations, comment, rating, requiredInput.user, requiredInput.comment, setReview, closePopup]
+    }, [popupData, clearPopupData, requiredInput.user, requiredInput.comment, setReview, closePopup]
   );
 
   const handleBlockClick = (evt) => {
@@ -92,11 +95,12 @@ const Popup = ({closePopup, setReview}) => {
                     >
                       <label className="form__label visually-hidden" htmlFor={item.id}>{item.title}</label>
                       <input
+                        ref={item.id === `user` ? inputUser : null}
                         className={`form__input ${isRequired ? `form__input--required` : ``}`}
                         type="text"
                         id={item.id}
                         name={item.id}
-                        value={reviewState[item.id]}
+                        value={popupData[item.id]}
                         placeholder={item.title}
                         onChange={(evt) => handleFieldChange(evt.target)}
                       />
@@ -118,7 +122,7 @@ const Popup = ({closePopup, setReview}) => {
                             id={`star-${item}`}
                             name="rating"
                             value={item}
-                            checked={rating === item}
+                            checked={popupData.rating === item}
                             onChange={(evt) => handleFieldChange(evt.target)}
                           />
                           <label className="form__label form__label--star" htmlFor={`star-${item}`}>
@@ -136,7 +140,7 @@ const Popup = ({closePopup, setReview}) => {
                   className={`form__textarea ${!requiredInput.comment ? `form__textarea--required` : ``}`}
                   name="comment"
                   id="comment"
-                  value={comment}
+                  value={popupData.comment}
                   placeholder="Комментарий"
                   onChange={(evt) => handleFieldChange(evt.target)}
                 />
@@ -151,9 +155,28 @@ const Popup = ({closePopup, setReview}) => {
 }
 
 Popup.propTypes = {
+  popupData: PropTypes.shape({
+    user: PropTypes.string.isRequired,
+    dignity: PropTypes.string.isRequired,
+    limitations: PropTypes.string.isRequired,
+    comment: PropTypes.string.isRequired,
+    rating: PropTypes.string.isRequired,
+  }).isRequired,
+  requiredInput: PropTypes.shape({
+    user: PropTypes.bool.isRequired,
+    comment: PropTypes.bool.isRequired,
+  }).isRequired,
   closePopup: PropTypes.func.isRequired,
   setReview: PropTypes.func.isRequired,
+  setPopupData: PropTypes.func.isRequired,
+  clearPopupData: PropTypes.func.isRequired,
+  setRequiredInput: PropTypes.func.isRequired,
 };
+
+const mapStateToProps = (store) => ({
+  popupData: getPopupData(store),
+  requiredInput: getRequiredInput(store),
+});
 
 const mapDispatchToProps = (dispatch) => ({
   setReview(date) {
@@ -162,6 +185,15 @@ const mapDispatchToProps = (dispatch) => ({
   closePopup() {
     dispatch(setPopupClose());
   },
+  setPopupData(date) {
+    dispatch(setPopupData(date));
+  },
+  clearPopupData() {
+    dispatch(clearPopupData());
+  },
+  setRequiredInput(flags) {
+    dispatch(setRequiredInput(flags));
+  },
 });
 
-export default connect(null, mapDispatchToProps)(Popup);
+export default connect(mapStateToProps, mapDispatchToProps)(Popup);

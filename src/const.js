@@ -12,8 +12,10 @@ import ImagSmallWebp2 from './assets/img/avto-2-small.webp';
 import ImagSmallWebp3 from './assets/img/avto-3-small.webp';
 
 export const STORE_REVIEWS_PREFIX = `avto-moto-localstorage-reviews`;
+export const STORE_POPUP_DATA_PREFIX = `avto-moto-localstorage-popup-data`;
 export const STORE_VERSION = `v1`;
-export const STORE_NAME = `${STORE_REVIEWS_PREFIX}-${STORE_VERSION}`;
+export const STORE_REVIEWS_NAME = `${STORE_REVIEWS_PREFIX}-${STORE_VERSION}`;
+export const STORE_POPUP_DATA_NAME = `${STORE_POPUP_DATA_PREFIX}-${STORE_VERSION}`;
 
 export const HEADER_NAV_LINKS = [
   `Автомобили`,
@@ -132,4 +134,20 @@ export const ActionType = {
   ADD_REVIEW: `ADD_REVIEW`,
   POPUP_OPEN: `POPUP_OPEN`,
   POPUP_CLOSE: `POPUP_CLOSE`,
+  POPUP_SAVE_DATA: `POPUP_SAVE_DATA`,
+  POPUP_CLEAR_DATA: `POPUP_CLEAR_DATA`,
+  REQUIRED_INPUT_CHANGE: `REQUIRED_INPUT_CHANGE`
 };
+
+export const defaultPopupData = {
+  user: ``,
+  dignity: ``,
+  limitations: ``,
+  comment: ``,
+  rating: ``,
+}
+
+export const defaultRequiredInput = {
+  user: false,
+  comment: false
+}

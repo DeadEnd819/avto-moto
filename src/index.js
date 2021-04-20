@@ -5,16 +5,16 @@ import {Provider} from 'react-redux';
 import rootReducer from './store/reducers/root-reducer';
 import App from './components/app/app';
 import './assets/scss/style.scss'
-import {STORE_NAME} from './const';
+import {STORE_POPUP_DATA_NAME} from './const';
 
 const store = createStore(
   rootReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
-store.subscribe(() => {
-  localStorage[STORE_NAME] = JSON.stringify(store.getState().REVIEWS);
-})
+window.onbeforeunload = () => {
+  localStorage.removeItem(STORE_POPUP_DATA_NAME);
+};
 
 ReactDOM.render(
   <Provider store={store}>
