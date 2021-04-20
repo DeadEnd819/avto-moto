@@ -11,11 +11,11 @@
 
 .details__wrapper {
   flex-direction: column;
-  margin-left: 3px;
 }
 
 .details__title,
-.details__price {
+.details__new-price,
+.details__old-price {
   @include reset-text;
 }
 
@@ -62,10 +62,15 @@
 }
 
 .details__price {
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 37px;
+}
+
+.details__new-price {
   @include base-font($bold);
   font-size: 35px;
   line-height: 48px;
-  margin-bottom: 37px;
 }
 
 .details__old-price {
@@ -73,9 +78,7 @@
   position: relative;
   font-size: 20px;
   line-height: 27px;
-  margin-top: 12px;
   margin-left: 39px;
-  padding-bottom: 6px;
   opacity: 0.5;
 
   &::after {

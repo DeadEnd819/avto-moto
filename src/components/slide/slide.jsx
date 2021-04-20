@@ -6,7 +6,7 @@ const Slide = ({img}) => {
     <div className="slider__slide slide">
       <picture className="slide__image">
         <source type="image/webp" srcSet={img.bigWebp} />
-        <img src={img.big} alt="Фото автомобиля" />
+        <img src={img.big} width="600" height="375" alt="Фото автомобиля" />
       </picture>
       <p className="slide__text">NEW MODEL</p>
     </div>

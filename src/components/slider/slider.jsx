@@ -21,7 +21,7 @@ const Slider = () => {
               <li key={`${i}-${item}`} className="slider__preview-item">
                 <picture>
                   <source type="image/webp" srcSet={item.smallWebp} />
-                  <img src={item.small} alt={`Миниатюра слайда ${i + 1}`} />
+                  <img src={item.small} width="128" height="80" alt={`Миниатюра слайда ${i + 1}`} />
                 </picture>
               </li>
             );
