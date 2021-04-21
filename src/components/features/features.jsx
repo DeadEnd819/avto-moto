@@ -15,7 +15,7 @@ const Features = () => {
       )}
     </dl>
   );
-}
+};
 
 Features.propTypes = {};
 

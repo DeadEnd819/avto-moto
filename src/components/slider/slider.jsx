@@ -35,7 +35,7 @@ const Slider = () => {
       </div>
     </div>
   );
-}
+};
 
 Slider.propTypes = {};
 

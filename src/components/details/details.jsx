@@ -31,7 +31,7 @@ const Details = () => {
       </div>
     </div>
   );
-}
+};
 
 Details.propTypes = {};
 

@@ -7,7 +7,7 @@ import Tabs from '../tabs/tabs';
 import Popup from '../popup/popup';
 import {getPopupFlag} from "../../store/selectors";
 
-const Main = ({getPopupFlag}) => {
+const Main = ({popupFlag}) => {
   return (
     <main className="main">
       <div className="main_wrapper container">
@@ -19,18 +19,18 @@ const Main = ({getPopupFlag}) => {
           </div>
           <Tabs />
         </section>
-        {getPopupFlag && <Popup />}
+        {popupFlag && <Popup />}
       </div>
     </main>
   );
-}
+};
 
 Main.propTypes = {
-  getPopupFlag: PropTypes.bool.isRequired,
+  popupFlag: PropTypes.bool.isRequired,
 };
 
 const mapStateToProps = (store) => ({
-  getPopupFlag: getPopupFlag(store),
+  popupFlag: getPopupFlag(store),
 });
 
 export default connect(mapStateToProps)(Main);

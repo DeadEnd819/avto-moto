@@ -11,7 +11,7 @@ const App = () => {
       <Footer />
     </>
   );
-}
+};
 
 App.propTypes = {};
 

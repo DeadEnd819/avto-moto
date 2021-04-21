@@ -1,3 +1,4 @@
+import React from 'react';
 import Imag1 from './assets/img/avto-1.jpg';
 import Imag2 from './assets/img/avto-2.jpg';
 import Imag3 from './assets/img/avto-3.jpg';
@@ -43,13 +44,13 @@ export const POPUP_INPUTS = [
   },
   {
     id: `dignity`,
-    title:`Достоинства`,
+    title: `Достоинства`,
   },
   {
     id: `limitations`,
-    title:`Недостатки`,
+    title: `Недостатки`,
   }
-  ];
+];
 
 export const TabNames = {
   FEATURE: `Характеристики`,
@@ -145,9 +146,9 @@ export const defaultPopupData = {
   limitations: ``,
   comment: ``,
   rating: ``,
-}
+};
 
 export const defaultRequiredInput = {
   user: false,
   comment: false
-}
+};

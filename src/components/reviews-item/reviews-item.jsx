@@ -13,10 +13,10 @@ const ReviewsItem = ({review}) => {
       <h2 className="definition__title">{user}</h2>
       <dl className="definition__list">
         {Object.keys(definition).map((key, i) =>
-            <div className="definition__wrapper" key={i + key}>
-              <dt className={`definition__name definition__name--${key}`}>{DEFINITION_TITLES[i]}</dt>
-              <dd className="definition__value">{definition[key]}</dd>
-            </div>
+          <div className="definition__wrapper" key={i + key}>
+            <dt className={`definition__name definition__name--${key}`}>{DEFINITION_TITLES[i]}</dt>
+            <dd className="definition__value">{definition[key]}</dd>
+          </div>
         )}
       </dl>
       <div className="reviews__rating rating">
@@ -38,7 +38,7 @@ const ReviewsItem = ({review}) => {
       </div>
     </li>
   );
-}
+};
 
 ReviewsItem.propTypes = {
   review: PropTypes.shape({

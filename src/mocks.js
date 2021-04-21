@@ -25,7 +25,7 @@ export const REVIEWS_MOCKS = [
                 эту машину, надо быть готовым к большим расходам на обслуживание.`,
     },
     rating: `2`,
-    time:  String(new Date()),
+    time: String(new Date()),
   },
 ];
 

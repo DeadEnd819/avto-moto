@@ -147,7 +147,7 @@ const Popup = ({
       </div>
     </div>
   );
-}
+};
 
 Popup.propTypes = {
   popupData: PropTypes.shape({

@@ -17,7 +17,7 @@ const SliderButton = ({onButtonClick, disabled, type}) => {
       />
     </button>
   );
-}
+};
 
 SliderButton.propTypes = {
   onButtonClick: PropTypes.func.isRequired,

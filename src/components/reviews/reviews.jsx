@@ -21,21 +21,21 @@ const Reviews = ({openPopup, reviews}) => {
       </ul>
     </div>
   );
-}
+};
 
 Reviews.propTypes = {
   openPopup: PropTypes.func.isRequired,
   reviews: PropTypes.arrayOf(
-    PropTypes.shape({
-      user: PropTypes.string.isRequired,
-      definition: PropTypes.shape({
-        dignity: PropTypes.string.isRequired,
-        limitations: PropTypes.string.isRequired,
-        comment: PropTypes.string.isRequired,
-      }).isRequired,
-      rating: PropTypes.string.isRequired,
-      time: PropTypes.string.isRequired,
-  })),
+      PropTypes.shape({
+        user: PropTypes.string.isRequired,
+        definition: PropTypes.shape({
+          dignity: PropTypes.string.isRequired,
+          limitations: PropTypes.string.isRequired,
+          comment: PropTypes.string.isRequired,
+        }).isRequired,
+        rating: PropTypes.string.isRequired,
+        time: PropTypes.string.isRequired,
+      })),
 };
 
 const mapStateToProps = (store) => ({

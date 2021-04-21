@@ -8,7 +8,7 @@ const Nav = ({block, list}) => {
       <ul className={`nav__list nav__list--${block}`}>
         {list.map((item, i) =>
           <li className="nav__item" key={i + item}>
-            <a className="nav__link" href="#"  aria-label={`Перейти на станицу ${item}`}>
+            <a className="nav__link" href="#" aria-label={`Перейти на станицу ${item}`}>
               {item}
             </a>
           </li>
@@ -16,7 +16,7 @@ const Nav = ({block, list}) => {
       </ul>
     </nav>
   );
-}
+};
 
 Nav.propTypes = {
   block: PropTypes.string.isRequired,

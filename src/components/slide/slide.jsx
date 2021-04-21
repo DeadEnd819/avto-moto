@@ -11,7 +11,7 @@ const Slide = ({img}) => {
       <p className="slide__text">NEW MODEL</p>
     </div>
   );
-}
+};
 
 Slide.propTypes = {
   img: PropTypes.shape({

@@ -9,11 +9,11 @@ const Tabs = () => {
   const [activeTab, setActiveTab] = useState(TabNames.FEATURE);
 
   const handleTabClick = (evt) => {
-      if (!evt.target.textContent) {
-        return;
-      }
+    if (!evt.target.textContent) {
+      return;
+    }
 
-      setActiveTab(evt.target.textContent);
+    setActiveTab(evt.target.textContent);
   };
 
   const getTabComponent = () => {
@@ -25,7 +25,7 @@ const Tabs = () => {
       case TabNames.CONTACTS:
         return <Contacts />;
       default:
-        return;
+        return null;
     }
   };
 
@@ -40,7 +40,7 @@ const Tabs = () => {
       {getTabComponent()}
     </div>
   );
-}
+};
 
 Tabs.propTypes = {};
 

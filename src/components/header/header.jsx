@@ -15,7 +15,7 @@ const Header = () => {
       </div>
     </header>
   );
-}
+};
 
 Header.propTypes = {};
 
