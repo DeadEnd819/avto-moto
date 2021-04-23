@@ -1,4 +1,4 @@
-export const REVIEWS_MOCKS = [
+export const reviewsMocks= [
   {
     user: `Борис Иванов`,
     definition: {
@@ -29,7 +29,7 @@ export const REVIEWS_MOCKS = [
   },
 ];
 
-export const AVTO_INFO_MOCKS = {
+export const avtoInfoMocks = {
   id: `1`,
   name: `Марпех 11`,
   price: {

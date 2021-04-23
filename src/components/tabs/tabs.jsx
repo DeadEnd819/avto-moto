@@ -42,6 +42,4 @@ const Tabs = () => {
   );
 };
 
-Tabs.propTypes = {};
-
 export default Tabs;

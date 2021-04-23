@@ -1,8 +1,9 @@
 import {useEffect, useCallback} from 'react';
+import {Key} from '../const';
 
 export const useEscapeButton = (callback) => {
   const handleEscapeDown = useCallback((evt) => {
-    if (evt.key === `Escape` || evt.key === `Esc`) {
+    if (evt.key === Key.ESCAPE || evt.key === Key.ESC) {
       callback();
     }
   }, [callback]);

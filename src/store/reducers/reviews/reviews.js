@@ -1,13 +1,13 @@
 import {extend} from '../../../utils';
 import {ActionType, STORE_REVIEWS_NAME} from '../../../const';
-import {REVIEWS_MOCKS} from '../../../mocks';
+import {reviewsMocks} from '../../../mocks';
 
 const {ADD_REVIEW} = ActionType;
 
 const initialState = {
   reviews: localStorage[STORE_REVIEWS_NAME] ?
     JSON.parse(localStorage[STORE_REVIEWS_NAME]) :
-    REVIEWS_MOCKS
+    reviewsMocks
 };
 
 const reviews = (state = initialState, action) => {

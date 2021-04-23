@@ -1,9 +1,9 @@
 import React from 'react';
 import {FEATURES_LIST} from '../../const';
-import {AVTO_INFO_MOCKS} from '../../mocks';
+import {avtoInfoMocks} from '../../mocks';
 
 const Features = () => {
-  const {features} = AVTO_INFO_MOCKS;
+  const {features} = avtoInfoMocks;
 
   return (
     <dl className="tabs__features features">
@@ -16,7 +16,5 @@ const Features = () => {
     </dl>
   );
 };
-
-Features.propTypes = {};
 
 export default Features;

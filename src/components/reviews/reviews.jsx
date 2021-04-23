@@ -10,6 +10,7 @@ const Reviews = ({openPopup, reviews}) => {
     <div className="tabs__reviews reviews">
       <button
         className="reviews__button button button--white"
+        type="button"
         onClick={openPopup}
       >
         оставить отзыв

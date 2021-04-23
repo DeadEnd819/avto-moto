@@ -1,9 +1,9 @@
 import React from 'react';
 import {splittingDigits} from '../../utils';
-import {AVTO_INFO_MOCKS} from '../../mocks';
+import {avtoInfoMocks} from '../../mocks';
 
 const Details = () => {
-  const {id, name, price, details} = AVTO_INFO_MOCKS;
+  const {id, name, price, details} = avtoInfoMocks;
 
   return (
     <div className="description__details details" id={id}>
@@ -32,7 +32,5 @@ const Details = () => {
     </div>
   );
 };
-
-Details.propTypes = {};
 
 export default Details;

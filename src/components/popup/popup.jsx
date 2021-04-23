@@ -70,7 +70,7 @@ const Popup = ({
     <div className="review-popup" onClick={handleBlockClick}>
       <div className="review-popup__wrapper">
         <h2 className="review-popup__title">Оставить отзыв</h2>
-        <button className="review-popup__button-close" onClick={closePopup}>
+        <button className="review-popup__button-close" type="button" onClick={closePopup}>
           <ReactSVG className="review-popup__button-icon" src={CloseIcon}/>
         </button>
         <form

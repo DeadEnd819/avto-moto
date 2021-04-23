@@ -8,6 +8,7 @@ const SliderButton = ({onButtonClick, disabled, type}) => {
   return (
     <button
       className={`slider__button slider__button--${type}`}
+      type="button"
       onClick={onButtonClick}
       disabled={disabled}
     >

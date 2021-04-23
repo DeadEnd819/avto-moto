@@ -6,6 +6,7 @@ const TabsItem = ({tab, activeTab, onTabClick}) => {
     <li className="tabs__item">
       <button
         className={`tabs__button${activeTab === tab ? ` tabs__button--active` : ``}`}
+        type="button"
         onClick={onTabClick}
       >
         {tab}

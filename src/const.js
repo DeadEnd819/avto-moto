@@ -152,3 +152,16 @@ export const defaultRequiredInput = {
   user: false,
   comment: false
 };
+
+export const Key = {
+  ESCAPE: `Escape`,
+  ESC: `Esc`,
+}
+
+export const MapData = {
+  CENTER: [59.968140, 30.316303],
+  ZOOM: 15,
+  WIDTH: 431,
+  HEIGHT: 271,
+  MARK: [59.968136, 30.316262]
+};

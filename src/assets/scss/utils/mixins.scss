@@ -1,5 +1,5 @@
 @mixin base-font($weight: $regular) {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: "open-sans", "Arial", sans-serif;
   font-weight: $weight;
 }
 

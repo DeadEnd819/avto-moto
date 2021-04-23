@@ -37,6 +37,4 @@ const Slider = () => {
   );
 };
 
-Slider.propTypes = {};
-
 export default Slider;
