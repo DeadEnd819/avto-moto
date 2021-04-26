@@ -9,6 +9,7 @@ const SliderButton = ({onButtonClick, disabled, type}) => {
     <button
       className={`slider__button slider__button--${type}`}
       type="button"
+      aria-label="Перелистнуть на другое фото"
       onClick={onButtonClick}
       disabled={disabled}
     >

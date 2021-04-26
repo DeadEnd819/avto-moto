@@ -11,6 +11,7 @@ const Reviews = ({openPopup, reviews}) => {
       <button
         className="reviews__button button button--white"
         type="button"
+        aria-label="Открыть форму комментария"
         onClick={openPopup}
       >
         оставить отзыв

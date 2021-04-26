@@ -34,7 +34,7 @@ const ReviewsItem = ({review}) => {
       </div>
       <div>
         <time className="reviews__time" dateTime={time}>{getReviewDate(time)}</time>
-        <button className="reviews__button-reply" type="button">Ответить</button>
+        <button className="reviews__button-reply" type="button" aria-label="Ответить на комментарий">Ответить</button>
       </div>
     </li>
   );

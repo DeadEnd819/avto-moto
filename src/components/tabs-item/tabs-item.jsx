@@ -7,6 +7,7 @@ const TabsItem = ({tab, activeTab, onTabClick}) => {
       <button
         className={`tabs__button${activeTab === tab ? ` tabs__button--active` : ``}`}
         type="button"
+        aria-label={`Показать ${tab}`}
         onClick={onTabClick}
       >
         {tab}

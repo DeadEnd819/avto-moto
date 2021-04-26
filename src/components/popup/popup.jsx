@@ -70,7 +70,7 @@ const Popup = ({
     <div className="review-popup" onClick={handleBlockClick}>
       <div className="review-popup__wrapper">
         <h2 className="review-popup__title">Оставить отзыв</h2>
-        <button className="review-popup__button-close" type="button" onClick={closePopup}>
+        <button className="review-popup__button-close" type="button"  aria-label="Закрыть форму комментария" onClick={closePopup}>
           <ReactSVG className="review-popup__button-icon" src={CloseIcon}/>
         </button>
         <form
@@ -142,7 +142,7 @@ const Popup = ({
               </li>
             </ul>
           </div>
-          <button className="form__button-submit button button--red" type="submit">оставить отзыв</button>
+          <button className="form__button-submit button button--red" type="submit" aria-label="Отправить комментарий">оставить отзыв</button>
         </form>
       </div>
     </div>

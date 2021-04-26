@@ -2,9 +2,15 @@ import React from 'react';
 import Imag1 from './assets/img/avto-1.jpg';
 import Imag2 from './assets/img/avto-2.jpg';
 import Imag3 from './assets/img/avto-3.jpg';
+import ImagRetina1 from './assets/img/avto-1@2x.jpg';
+import ImagRetina2 from './assets/img/avto-2@2x.jpg';
+import ImagRetina3 from './assets/img/avto-3@2x.jpg';
 import ImagWebp1 from './assets/img/avto-1.webp';
 import ImagWebp2 from './assets/img/avto-2.webp';
 import ImagWebp3 from './assets/img/avto-3.webp';
+import ImagWebpRetina1 from './assets/img/avto-1@2x.webp';
+import ImagWebpRetina2 from './assets/img/avto-2@2x.webp';
+import ImagWebpRetina3 from './assets/img/avto-3@2x.webp';
 import ImagSmall1 from './assets/img/avto-1-small.jpg';
 import ImagSmall2 from './assets/img/avto-2-small.jpg';
 import ImagSmall3 from './assets/img/avto-3-small.jpg';
@@ -61,19 +67,25 @@ export const TabNames = {
 export const IMAGES = [
   {
     big: Imag1,
+    bigRetina: ImagRetina1,
     bigWebp: ImagWebp1,
+    bigWebpRetina: ImagWebpRetina1,
     small: ImagSmall1,
     smallWebp: ImagSmallWebp1
   },
   {
     big: Imag2,
+    bigRetina: ImagRetina2,
     bigWebp: ImagWebp2,
+    bigWebpRetina: ImagWebpRetina2,
     small: ImagSmall2,
     smallWebp: ImagSmallWebp2
   },
   {
     big: Imag3,
+    bigRetina: ImagRetina3,
     bigWebp: ImagWebp3,
+    bigWebpRetina: ImagWebpRetina3,
     small: ImagSmall3,
     smallWebp: ImagSmallWebp3
   },
