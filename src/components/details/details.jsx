@@ -21,9 +21,11 @@ const Details = () => {
           <p className="details__old-price">{splittingDigits(price.old)} &#8381;</p>
         </div>
         <div className="details__button-wrapper">
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
           <a className="details__button button button--red" href="#" aria-label="Перейти на страницу оформления заявки">
             оставить заявку
           </a>
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
           <a className="details__button button button--white" href="#" aria-label="Перейти на страницу оформления кредита">
             в кредит от 11 000 &#8381;
           </a>
