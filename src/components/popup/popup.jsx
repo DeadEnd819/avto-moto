@@ -23,7 +23,12 @@ const Popup = ({
   const inputUser = useRef(null);
 
   useEffect(() => {
+    document.body.style.overflow = `hidden`;
     inputUser.current.focus();
+
+    return () => {
+      document.body.style.overflow = `auto`
+    };
   },[]);
 
   const handleFieldChange = useCallback(({name, value}) => {
